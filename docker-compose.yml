@@ -1,0 +1,10 @@
+version: "2"
+services:
+  sinopia:
+    image: docker-registry.kemao.com/keyvanfatehi/sinopia
+    volumes:
+      - ./volume/opt/sinopia/config.yaml:/opt/sinopia/config.yaml
+      - ./volume/opt/sinopia/htpasswd.pwd:/opt/sinopia/htpasswd.pwd
+      - ./volume/opt/sinopia/storage:/opt/sinopia/storage
+    ports: 
+      - 4873:4873
